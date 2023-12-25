@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Array of maps with their names and image locations
     const maps = [
-        { name: "ASHIKA ISLAND", imageUrl: "images/Ashika%20Island.jpg" },
-        { name: "VONDEL", imageUrl: "images/Vondel.jpg" }
+        { name: "ASHIKA ISLAND", imageUrl: "Ashika Island.jpg" },
+        { name: "VONDEL", imageUrl: "Vondel.jpg" }
         // Add more maps as needed
     ];
 
