@@ -24,6 +24,14 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%; /* Make the container full width */
+    padding: 20px; /* Added padding around the center content */
+}
+
+h2 {
+    color: rgba(60, 255, 0, 0.747);
+    text-align: center;
+    margin: 1px; /* Add margin for even spacing */
+    padding: 1px; /* Add padding for even spacing */
 }
 
 h4 {
@@ -46,40 +54,58 @@ h4 {
 }
 
 /* Additional styles for the map container */
-#map-container {
+.map-container {
     position: relative;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
+    padding-bottom: 0px;
     border-radius: 10px;
     background-color: rgba(51, 51, 51, 0.0);
+    margin-bottom: 0px; /* Added margin between map containers */
 }
 
-#map-image {
+.map-container h2 {
+    color: white;
+    text-align: center;
+}
+
+.map-image {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+
 }
 
-#map-overlay {
+.map-overlay {
     position: absolute;
     top: 25px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.2em;
-    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffffca;
     width: 100%;
+    -webkit-text-stroke: 0.7px #000000; /* Webkit-based browsers like Chrome and Safari */
+    text-stroke: 5px #000000; /* Standard property */
+    padding: 15px; /* Add padding for better visibility */
 }
 
-#countdown {
-    font-size: 1.5em;
+.countdown {
+    font-size: 1.8em;
     margin-top: 10px;
-    color: #ff0505d7;
+    color: #ff0505 !important;
     font-weight: bold;
     position: absolute;
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
+    border: 2px solid transparent; /* Transparent border */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    background-color: rgba(0, 0, 0, 0.257); /* White background */
+    padding: 5px; /* Optional: Add padding for better appearance */
 }
+
+
 
 /* Media query for mobile view */
 @media (max-width: 767px) {
