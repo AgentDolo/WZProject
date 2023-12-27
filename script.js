@@ -78,8 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const now = new Date();
             const currentTime = now.getTime();
 
-            // Set the rotation time to every 10 seconds for demonstration purposes
-            const rotationTime = 10 * 1000; // 10 seconds in milliseconds
+            // Set the rotation time to every 15 minutes for demonstration purposes
+            const rotationTime = 15 * 60 * 1000; // 15 minutes in milliseconds
 
             // Calculate the time until the next rotation
             const timeUntilRotation = rotationTime - (currentTime % rotationTime);
@@ -116,11 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
         updateDuosMap();
         updateSolosMap();
 
-        // Store map indices in localStorage
-        localStorage.setItem('quadsMapIndex', quadsMapIndex);
-        localStorage.setItem('triosMapIndex', triosMapIndex);
-        localStorage.setItem('duosMapIndex', duosMapIndex);
-        localStorage.setItem('solosMapIndex', solosMapIndex);
     }
 
     // Initial map setup
@@ -133,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCountdown(solosCountdownElement, solosMapIndex, solosMaps);
 
 
-    // Rotate maps every 10 seconds
+    // Rotate maps every 15 minutes
     setInterval(function () {
         quadsMapIndex = rotateMap(quadsMapIndex, quadsMaps);
         triosMapIndex = rotateMap(triosMapIndex, triosMaps);
@@ -143,5 +138,5 @@ document.addEventListener("DOMContentLoaded", function () {
         updateTriosMap();
         updateDuosMap();
         updateSolosMap();
-    }, 10000);
+    }, 15 * 60 * 1000);
 });
