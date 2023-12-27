@@ -73,7 +73,6 @@ h4 {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-
 }
 
 .map-overlay {
@@ -104,8 +103,6 @@ h4 {
     background-color: rgba(0, 0, 0, 0.257); /* White background */
     padding: 5px; /* Optional: Add padding for better appearance */
 }
-
-
 
 /* Media query for mobile view */
 @media (max-width: 767px) {
