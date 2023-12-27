@@ -1,36 +1,45 @@
 const express = require('express');
-const path = require('path');
-
+const fs = require('fs');
 const app = express();
-const port = 80; // Use port 80 for HTTP
 
-// Serve static files from the current directory
-app.use(express.static(__dirname));
+// List of maps
+const mapsList = ["Ashika", "Vondel"];
 
-// Serve the HTML file for all routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+// Counter to keep track of time elapsed
+let counter = 0;
+let lastModifiedTime;
+
+app.get('/current-map', (req, res) => {
+  // Check if the file has been modified
+  const stats = fs.statSync('quadsResurgenceMap.txt');
+  if (lastModifiedTime && stats.mtime > lastModifiedTime) {
+    // File has been modified, send a notification to the client
+    lastModifiedTime = stats.mtime;
+    res.send({ currentMap: getCurrentMap(), modified: true });
+  } else {
+    res.send({ currentMap: getCurrentMap(), modified: false });
+  }
 });
 
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+function getCurrentMap() {
+  const currentMapIndex = Math.floor(counter / 10) % mapsList.length;
+  return mapsList[currentMapIndex];
+}
+
+app.listen(80, () => {
+  console.log('Server is running on port 80');
 });
 
+// Increment the counter every second
+setInterval(() => {
+  counter += 1;
+}, 1000);
 
-// ... (previous code)
+// Periodically check for file modifications (every second in this example)
+setInterval(() => {
+  const stats = fs.statSync('quadsResurgenceMap.txt');
+  if (!lastModifiedTime || stats.mtime > lastModifiedTime) {
+    lastModifiedTime = stats.mtime;
+  }
+}, 1000);
 
-const maps = [
-    { name: "Map 1", imageUrl: "images/map1.jpg" },
-    { name: "Map 2", imageUrl: "images/map2.jpg" },
-    // Add more maps as needed
-  ];
-  
-  let mapIndex = 0;
-  
-  app.get('/getMap', (req, res) => {
-    const currentMap = maps[mapIndex];
-    mapIndex = (mapIndex + 1) % maps.length;
-    res.json(currentMap);
-  });
-  
