@@ -1,4 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    function checkFileModification() {
+        fetch("/current-map")
+          .then(response => response.json())
+          .then(data => {
+            if (data.modified) {
+              // File has been modified, refresh the page
+              window.location.reload();
+            } else {
+              // Update the current map
+              const quadsCountdownElement = document.querySelector("#resurgenceQuads .timer");
+              quadsCountdownElement.textContent = data.currentMap;
+    
+              // Add similar updates for other map elements if needed
+            }
+          })
+          .catch(error => {
+            console.error("Error checking file modification:", error);
+          });
+      }
+    
+      // Check for file modification every second
+      setInterval(checkFileModification, 10000);
+
     // Define map indices for each rotation from localStorage or default to 0
     let quadsMapIndex = parseInt(localStorage.getItem('quadsMapIndex')) || 0;
     let triosMapIndex = parseInt(localStorage.getItem('triosMapIndex')) || 0;
@@ -6,66 +30,36 @@ document.addEventListener("DOMContentLoaded", function () {
     let solosMapIndex = parseInt(localStorage.getItem('solosMapIndex')) || 0;
 
     // Get elements for each rotation
-    const quadsMapImageElement = document.querySelector("#resurgenceQuads .map-image");
-    const quadsMapOverlayElement = document.querySelector("#resurgenceQuads .map-overlay");
     const quadsCountdownElement = document.querySelector("#resurgenceQuads .timer");
-
-    const triosMapImageElement = document.querySelector("#resurgenceTrios .map-image");
-    const triosMapOverlayElement = document.querySelector("#resurgenceTrios .map-overlay");
     const triosCountdownElement = document.querySelector("#resurgenceTrios .timer");
-
-    const duosMapImageElement = document.querySelector("#resurgenceDuos .map-image");
-    const duosMapOverlayElement = document.querySelector("#resurgenceDuos .map-overlay");
     const duosCountdownElement = document.querySelector("#resurgenceDuos .timer");
-
-    const solosMapImageElement = document.querySelector("#resurgenceSolos .map-image");
-    const solosMapOverlayElement = document.querySelector("#resurgenceSolos .map-overlay");
     const solosCountdownElement = document.querySelector("#resurgenceSolos .timer");
 
     // Array of maps for each rotation
     const quadsMaps = [
-        { name: "VONDEL", imageUrl: "images/Vondel.jpg" },
-        { name: "ASHIKA ISLAND", imageUrl: "images/Ashika%20Island.jpg" }
+        { name: "VONDEL", imageUrl: "images/Vondel.webp" },
+        { name: "ASHIKA ISLAND", imageUrl: "images/Ashika%20Island.webp" }
         // Add more maps as needed
     ];
 
     const triosMaps = [
-        { name: "ASHIKA ISLAND", imageUrl: "images/Ashika%20Island.jpg" },
-        { name: "VONDEL", imageUrl: "images/Vondel.jpg" }
+        { name: "Zaravan", imageUrl: "images/Zaravan.webp" },
+        { name: "Popov", imageUrl: "images/Popov.webp" },
+        { name: "Military", imageUrl: "images/Military.webp" }
         // Add more maps as needed
     ];
 
     const duosMaps = [
-        { name: "DUOS MAP 1", imageUrl: "images/Vondel.jpg" },
-        { name: "DUOS MAP 2", imageUrl: "images/Ashika%20Island.jpg" }
+        { name: "VONDEL", imageUrl: "images/Vondel.webp" },
+        { name: "ASHIKA ISLAND", imageUrl: "images/Ashika%20Island.webp" }
         // Add more maps as needed
     ];
 
     const solosMaps = [
-        { name: "SOLOS MAP 1", imageUrl: "images/Ashika%20Island.jpg" },
-        { name: "SOLOS MAP 2", imageUrl: "images/Vondel.jpg" }
+        { name: "ASHIKA ISLAND", imageUrl: "images/Ashika%20Island.webp" },
+        { name: "VONDEL", imageUrl: "images/Vondel.webp" }
         // Add more maps as needed
     ];
-
-    function updateQuadsMap() {
-        quadsMapImageElement.src = quadsMaps[quadsMapIndex].imageUrl;
-        quadsMapOverlayElement.innerHTML = `${quadsMaps[quadsMapIndex].name}`;
-    }
-
-    function updateTriosMap() {
-        triosMapImageElement.src = triosMaps[triosMapIndex].imageUrl;
-        triosMapOverlayElement.innerHTML = `${triosMaps[triosMapIndex].name}`;
-    }
-
-    function updateDuosMap() {
-        duosMapImageElement.src = duosMaps[duosMapIndex].imageUrl;
-        duosMapOverlayElement.innerHTML = `${duosMaps[duosMapIndex].name}`;
-    }
-
-    function updateSolosMap() {
-        solosMapImageElement.src = solosMaps[solosMapIndex].imageUrl;
-        solosMapOverlayElement.innerHTML = `${solosMaps[solosMapIndex].name}`;
-    }
 
     function rotateMap(mapIndex, maps) {
         // Rotate to the next map
@@ -94,6 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
             if (timeUntilRotation <= 0) {
                 mapIndex = rotateMap(mapIndex, maps);
                 updateMap();
+
+                // Refresh the browser when the timer reaches 0:00
+                if (minutes === 0 && seconds === 0) {
+                    window.location.reload();
+                }
             }
         }
 
@@ -106,20 +105,35 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1000);
     }
 
+    function checkFileModification() {
+        fetch("/current-map")
+          .then(response => response.json())
+          .then(data => {
+            if (data.modified) {
+              // File has been modified, refresh the page
+              window.location.reload();
+            } else {
+              // Update the current map
+              const quadsCountdownElement = document.querySelector("#resurgenceQuads .timer");
+              quadsCountdownElement.textContent = data.currentMap;
+    
+              // Add similar updates for other map elements if needed
+            }
+          })
+          .catch(error => {
+            console.error("Error checking file modification:", error);
+          });
+      }
+    
+      // Check for file modification every second
+      setInterval(checkFileModification, 10000);
+
     function updateMap() {
         quadsMapIndex = rotateMap(quadsMapIndex, quadsMaps);
         triosMapIndex = rotateMap(triosMapIndex, triosMaps);
         duosMapIndex = rotateMap(duosMapIndex, duosMaps);
         solosMapIndex = rotateMap(solosMapIndex, solosMaps);
-        updateQuadsMap();
-        updateTriosMap();
-        updateDuosMap();
-        updateSolosMap();
-
     }
-
-    // Initial map setup
-    updateMap();
 
     // Start automatic image sliding and countdown
     updateCountdown(quadsCountdownElement, quadsMapIndex, quadsMaps);
@@ -127,16 +141,12 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCountdown(duosCountdownElement, duosMapIndex, duosMaps);
     updateCountdown(solosCountdownElement, solosMapIndex, solosMaps);
 
-
     // Rotate maps every 15 minutes
     setInterval(function () {
         quadsMapIndex = rotateMap(quadsMapIndex, quadsMaps);
         triosMapIndex = rotateMap(triosMapIndex, triosMaps);
         duosMapIndex = rotateMap(duosMapIndex, duosMaps);
         solosMapIndex = rotateMap(solosMapIndex, solosMaps);
-        updateQuadsMap();
-        updateTriosMap();
-        updateDuosMap();
-        updateSolosMap();
+        updateMap();
     }, 15 * 60 * 1000);
 });
