@@ -16,3 +16,21 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+
+// ... (previous code)
+
+const maps = [
+    { name: "Map 1", imageUrl: "images/map1.jpg" },
+    { name: "Map 2", imageUrl: "images/map2.jpg" },
+    // Add more maps as needed
+  ];
+  
+  let mapIndex = 0;
+  
+  app.get('/getMap', (req, res) => {
+    const currentMap = maps[mapIndex];
+    mapIndex = (mapIndex + 1) % maps.length;
+    res.json(currentMap);
+  });
+  
