@@ -29,12 +29,13 @@ header {
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%; /* Make the container full width */
     padding: 20px; /* Added padding around the center content */
+    
 }
 
 h2 {
