@@ -134,28 +134,37 @@ h4 {
     padding: 5px; /* Optional: Add padding for better appearance */
 }
 
+}
+
 /* Media query for mobile view */
 @media (max-width: 767px) {
     header {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column; /* Adjust as needed */
+        justify-content: center;
         align-items: center;
-        text-align: left;
+        text-align: center;
     }
 
-    body {
-    font-family: "Borsok";
-    padding-bottom: 5px;
-    
-}
-
-
     .container {
-        padding: 0 15px; /* Added padding around the content inside the header */
+        padding: 0; /* Adjust as needed */
     }
 
     #signInBtn {
-        margin-right: 45px; /* Move the button more to the left */
+        margin-right: 0; /* Adjust as needed */
+        margin-top: 10px; /* Add some spacing from the top */
+    }
+
+    /* Adjust the height of the map container */
+    .map-container {
+        padding: 25px;
+        padding-bottom: 50px; /* Increase the bottom padding to extend the height */
+        border-radius: 10px;
+        background-color: rgba(51, 51, 51, 0.0);
+        margin-bottom: 0px;
+    }
+
+    /* Adjust the countdown position to fit the extended height */
+    .countdown {
+        bottom: 65px;
     }
 }
-
