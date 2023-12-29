@@ -3,10 +3,7 @@ const fs = require('fs');
 const app = express();
 
 // List of maps with name and image URL
-const mapsList = [
-  { name: "Ashika", imageUrl: "images/Ashika.jpg" },
-  { name: "Vondel", imageUrl: "images/Vondel.jpg" }
-];
+const mapsList = ["Ashika", "Vondel"];
 
 // Counter to keep track of time elapsed
 let counter = 0;
