@@ -45,16 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Popov", imageUrl: "images/Popov.webp" }
         // Add more maps as needed
     ];
-
-
-    
-          
-            
-    
-
-          
-          Expand Down
-    
     
   
     const duosMaps = [
