@@ -37,15 +37,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Array of maps for each rotation
     const quadsMaps = [
-        { name: "VONDEL", imageUrl: "images/Vondel.jpg" },
-        { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.jpg" }
+        { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.jpg" },
+        { name: "VONDEL", imageUrl: "images/Vondel.jpg" }
         // Add more maps as needed
     ];
 
     const triosMaps = [
+        { name: "Military", imageUrl: "images/Military.webp" },
         { name: "Zaravan", imageUrl: "images/Zaravan.webp" },
-        { name: "Popov", imageUrl: "images/Popov.webp" },
-        { name: "Military", imageUrl: "images/Military.webp" }
+        { name: "Popov", imageUrl: "images/Popov.webp" }
         // Add more maps as needed
     ];
 
