@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Array of maps for each rotation
     const quadsMaps = [
-        { name: "VONDEL", imageUrl: "images/Vondel.jpg" },
-        { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.jpg" }
+        { name: "VONDEL", imageUrl: "images/Vondel.webp" },
+        { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.webp" }
         // Add more maps as needed
     ];
 
@@ -51,12 +51,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const duosMaps = [
         { name: "VONDEL", imageUrl: "images/Vondel.webp" },
-        { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.jpg" }
+        { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.webp" }
         // Add more maps as needed
     ];
 
     const solosMaps = [
-        { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.jpg" },
+        { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.webp" },
         { name: "VONDEL", imageUrl: "images/Vondel.webp" }
         // Add more maps as needed
     ];
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const currentTime = now.getTime();
 
             // Set the rotation time to every 15 minutes for demonstration purposes
-            const rotationTime = 15 * 60 * 1000; // 15 minutes in milliseconds
+            const rotationTime = 15  * 1000; // 15 minutes in milliseconds
 
             // Calculate the time until the next rotation
             const timeUntilRotation = rotationTime - (currentTime % rotationTime);
