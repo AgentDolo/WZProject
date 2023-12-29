@@ -163,6 +163,6 @@ h4 {
     
   
     .countdown {
-        bottom: 1px; /* Set the desired distance from the bottom */
+        bottom: 10px; /* Set the desired distance from the bottom */
     }
 }
