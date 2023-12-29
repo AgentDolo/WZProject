@@ -3,7 +3,6 @@
     src: url(fonts/borsok-font/boorsok.ttf);
 }
 
-
 body {
     font-family: "Borsok";
     margin: 0;
@@ -20,12 +19,24 @@ html, body {
     overflow-x: hidden;
 }
 
+.map-rotations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.map-rotation {
+    flex-basis: calc(50% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
 /* Additional styles for the header */
 header {
     background-color: #333;
     color: white;
-    padding: 15px; /* Added padding around the entire header */
-    width: 100%; /* Make the header full width */
+    padding: 10px;
+    width: 100%;
 }
 
 .container {
@@ -34,26 +45,23 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    width: 100%; /* Make the container full width */
-    padding: 20px; /* Added padding around the center content */
-    
+    width: 100%;
+    padding: 20px;
 }
 
 h2 {
-    font-family: "Borsok";
     color: rgba(60, 255, 0, 0.747);
     text-align: center;
-    margin: 1px; /* Add margin for even spacing */
-    padding: 1px; /* Add padding for even spacing */
+    margin: 1px;
+    padding: 1px;
     font-weight: 100;
     font-size: 1.3rem;
 }
 
 h4 {
-    font-family: "Borsok";
     margin: 0;
     font-size: 1.2em;
-    color: white; /* Set the site title color to pure white */
+    color: white;
     font-weight: 100;
 }
 
@@ -78,7 +86,7 @@ h4 {
     padding-bottom: 0px;
     border-radius: 10px;
     background-color: rgba(51, 51, 51, 0.0);
-    margin-bottom: 0px; /* Added margin between map containers */
+    margin-bottom: 0px;
 }
 
 .map-container h2 {
@@ -98,73 +106,70 @@ h4 {
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.5em;
-    font-weight: bold;
+    font-weight: normal;
     color: #ffffffca;
     width: 100%;
-    -webkit-text-stroke: 0.7px #000000; /* Webkit-based browsers like Chrome and Safari */
-    text-stroke: 5px #000000; /* Standard property */
-    padding: 15px; /* Add padding for better visibility */
+    -webkit-text-stroke: 0.7px #000000;
+    text-stroke: 5px #000000;
+    padding: 15px;
 }
-
-.map-rotations {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.map-rotation {
-    flex-basis: calc(50% - 20px); /* Set to 50% width with some spacing */
-    box-sizing: border-box;
-    margin-bottom: 20px;
-}
-
 
 .countdown {
     font-size: 1.8em;
     margin-top: 10px;
     color: #ff0505 !important;
-    font-weight: bold;
+    font-weight: normal;
     position: absolute;
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-    border: 2px solid transparent; /* Transparent border */
-    border-radius: 5px; /* Optional: Add border radius for rounded corners */
-    background-color: rgba(0, 0, 0, 0.257); /* White background */
-    padding: 5px; /* Optional: Add padding for better appearance */
-}
-
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.257);
+    padding: 5px;
 }
 
 /* Media query for mobile view */
 @media (max-width: 767px) {
     header {
-        flex-direction: column; /* Adjust as needed */
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
     }
 
     .container {
-        padding: 0; /* Adjust as needed */
+        padding: 0;
     }
 
     #signInBtn {
-        margin-right: 0; /* Adjust as needed */
-        margin-top: 10px; /* Add some spacing from the top */
+        margin-right: 0;
+        margin-top: 10px;
     }
 
-    /* Adjust the height of the map container */
     .map-container {
-        padding: 25px;
-        padding-bottom: 50px; /* Increase the bottom padding to extend the height */
+        padding: 0px;
         border-radius: 10px;
         background-color: rgba(51, 51, 51, 0.0);
         margin-bottom: 0px;
     }
 
+    .map-rotation {
+        padding-bottom: 0rem;
+        padding-top: 1rem;
+        justify-content: space-evenly;
+    }
+
+    .map-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        padding: 0px;
+    }
+
+    }
     /* Adjust the countdown position to fit the extended height */
     .countdown {
-        bottom: 65px;
+        bottom: 1px; /* Set the desired distance from the bottom */
     }
 }
