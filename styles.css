@@ -148,21 +148,12 @@ h4 {
         border-radius: 8px;
         padding: 0px;
     }
-
-    }
     /* Adjust the countdown position to fit the extended height */
 
-    
-          
-            
-    
-
-          
-          Expand Down
     
     
   
     .countdown {
-        bottom: 10px; /* Set the desired distance from the bottom */
+        bottom: 0px; /* Set the desired distance from the bottom */
     }
 }
