@@ -106,6 +106,19 @@ h4 {
     padding: 15px; /* Add padding for better visibility */
 }
 
+.map-rotations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.map-rotation {
+    flex-basis: calc(50% - 20px); /* Set to 50% width with some spacing */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+
 .countdown {
     font-size: 1.8em;
     margin-top: 10px;
