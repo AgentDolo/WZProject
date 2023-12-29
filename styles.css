@@ -28,7 +28,7 @@ html, body {
 .map-rotation {
     flex-basis: calc(50% - 20px);
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /* Additional styles for the header */
