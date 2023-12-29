@@ -2,7 +2,6 @@
     font-family: 'Borsok';
     src: url(fonts/borsok-font/boorsok.ttf);
 }
-
 body {
     font-family: "Borsok";
     margin: 0;
@@ -14,23 +13,19 @@ body {
     background-color: #1a1a1a;
     overflow-x: hidden;
 }
-
 html, body {
     overflow-x: hidden;
 }
-
 .map-rotations {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-
 .map-rotation {
     flex-basis: calc(50% - 20px);
     box-sizing: border-box;
     margin-bottom: 10px;
 }
-
 /* Additional styles for the header */
 header {
     background-color: #333;
@@ -38,7 +33,6 @@ header {
     padding: 10px;
     width: 100%;
 }
-
 .container {
     display: flex;
     justify-content: space-around;
@@ -48,7 +42,6 @@ header {
     width: 100%;
     padding: 20px;
 }
-
 h2 {
     color: rgba(60, 255, 0, 0.747);
     text-align: center;
@@ -57,14 +50,12 @@ h2 {
     font-weight: 100;
     font-size: 1.3rem;
 }
-
 h4 {
     margin: 0;
     font-size: 1.2em;
     color: white;
     font-weight: 100;
 }
-
 #signInBtn {
     padding: 10px 10px;
     border: none;
@@ -73,11 +64,9 @@ h4 {
     color: white;
     cursor: pointer;
 }
-
 #signInBtn:hover {
     background-color: #45a049;
 }
-
 /* Additional styles for the map container */
 .map-container {
     position: relative;
@@ -88,18 +77,15 @@ h4 {
     background-color: rgba(51, 51, 51, 0.0);
     margin-bottom: 0px;
 }
-
 .map-container h2 {
     color: white;
     text-align: center;
 }
-
 .map-image {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
-
 .map-overlay {
     position: absolute;
     top: 25px;
@@ -113,7 +99,6 @@ h4 {
     text-stroke: 5px #000000;
     padding: 15px;
 }
-
 .countdown {
     font-size: 1.8em;
     margin-top: 10px;
@@ -125,10 +110,9 @@ h4 {
     transform: translateX(-50%);
     border: 2px solid transparent;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.088);
+    background-color: rgba(0, 0, 0, 0.257);
     padding: 5px;
 }
-
 /* Media query for mobile view */
 @media (max-width: 767px) {
     header {
@@ -137,11 +121,9 @@ h4 {
         align-items: center;
         text-align: center;
     }
-
     .container {
         padding: 0;
     }
-
     #signInBtn {
         margin-right: 0;
         margin-top: 10px;
@@ -169,8 +151,18 @@ h4 {
 
     }
     /* Adjust the countdown position to fit the extended height */
+
+    
+          
+            
+    
+
+          
+          Expand Down
+    
+    
+  
     .countdown {
-        bottom: 6px; /* Set the desired distance from the bottom */
+        bottom: 1px; /* Set the desired distance from the bottom */
     }
 }
-
