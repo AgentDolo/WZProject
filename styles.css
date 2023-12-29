@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'Borsok';
-    src: url(fonts/borsok-font/borsok.ttf);
+    font-family: 'Boorsok';
+    src: url(fonts/borsok-font/boorsok.ttf);
 }
 
 
 body {
-    font-family: "Borsok";
+    font-family: "Boorsok";
     margin: 0;
     padding: 0;
     display: flex;
