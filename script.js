@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Array of maps for each rotation
     const quadsMaps = [
-        { name: "Vondel", imageUrl: "https://wzmaprotationimages.s3.amazonaws.com/Vondel.jpg" },
-        { name: "Ashika", imageUrl: "https://wzmaprotationimages.s3.amazonaws.com/Ashika.jpg" }
+        { name: "Vondel", imageUrl: "images/Vondel.jpg" },
+        { name: "Ashika", imageUrl: "images/Ashika.jpg" }
         // Add more maps as needed
     ];
 
