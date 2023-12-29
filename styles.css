@@ -40,6 +40,7 @@ header {
 }
 
 h2 {
+    font-family: "Boorsok";
     color: rgba(60, 255, 0, 0.747);
     text-align: center;
     margin: 1px; /* Add margin for even spacing */
@@ -49,6 +50,7 @@ h2 {
 }
 
 h4 {
+    font-family: "Boorsok";
     margin: 0;
     font-size: 1.2em;
     color: white; /* Set the site title color to pure white */
