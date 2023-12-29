@@ -156,14 +156,14 @@ h4 {
 
     .map-rotation {
         padding-bottom: 0rem;
-        padding-top: 1rem;
+        padding-top: 0rem;
         justify-content: space-evenly;
 }
 
     }
     /* Adjust the countdown position to fit the extended height */
     .countdown {
-        bottom: 0px; /* Set the desired distance from the bottom */
+        bottom: 1px; /* Set the desired distance from the bottom */
     }
 }
 
