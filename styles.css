@@ -15,6 +15,10 @@ body {
     background-color: #1a1a1a;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 /* Additional styles for the header */
 header {
     background-color: #333;
