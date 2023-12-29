@@ -170,7 +170,7 @@ h4 {
     }
     /* Adjust the countdown position to fit the extended height */
     .countdown {
-        bottom: 1.5px; /* Set the desired distance from the bottom */
+        bottom: 2px; /* Set the desired distance from the bottom */
     }
 }
 
