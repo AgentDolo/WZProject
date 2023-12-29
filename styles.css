@@ -157,6 +157,8 @@ h4 {
     .map-rotation {
         padding-bottom: 0rem;
         padding-top: 1rem;
+        justify-content: space-evenly;
+}
 
     }
     /* Adjust the countdown position to fit the extended height */
