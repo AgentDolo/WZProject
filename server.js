@@ -2,8 +2,11 @@ const express = require('express');
 const fs = require('fs');
 const app = express();
 
-// List of maps
-const mapsList = ["Ashika", "Vondel"];
+// List of maps with name and image URL
+const mapsList = [
+  { name: "Ashika", imageUrl: "images/Ashika.jpg" },
+  { name: "Vondel", imageUrl: "images/Vondel.jpg" }
+];
 
 // Counter to keep track of time elapsed
 let counter = 0;
@@ -42,4 +45,3 @@ setInterval(() => {
     lastModifiedTime = stats.mtime;
   }
 }, 1000);
-
