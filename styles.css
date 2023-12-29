@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'Boorsok';
+    font-family: 'Borsok';
     src: url(fonts/borsok-font/boorsok.ttf);
 }
 
 
 body {
-    font-family: "Boorsok";
+    font-family: "Borsok";
     margin: 0;
     padding: 0;
     display: flex;
@@ -40,7 +40,7 @@ header {
 }
 
 h2 {
-    font-family: "Boorsok";
+    font-family: "Borsok";
     color: rgba(60, 255, 0, 0.747);
     text-align: center;
     margin: 1px; /* Add margin for even spacing */
@@ -50,7 +50,7 @@ h2 {
 }
 
 h4 {
-    font-family: "Boorsok";
+    font-family: "Borsok";
     margin: 0;
     font-size: 1.2em;
     color: white; /* Set the site title color to pure white */
