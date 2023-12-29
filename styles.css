@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'Borsok';
+    src: url(fonts/borsok-font/boorsok.ttf);
+}
+
+
 body {
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Borsok";
     margin: 0;
     padding: 0;
     display: flex;
@@ -32,12 +38,15 @@ h2 {
     text-align: center;
     margin: 1px; /* Add margin for even spacing */
     padding: 1px; /* Add padding for even spacing */
+    font-weight: 100;
+    font-size: 1.3rem;
 }
 
 h4 {
     margin: 0;
     font-size: 1.2em;
     color: white; /* Set the site title color to pure white */
+    font-weight: 100;
 }
 
 #signInBtn {
