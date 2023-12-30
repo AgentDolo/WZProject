@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const currentTime = now.getTime();
 
             // Set the rotation time to every 5 seconds for testing purposes
-            const rotationTime = 5 * 1000; // 5 seconds in milliseconds
+            const rotationTime = 10 * 1000; // 5 seconds in milliseconds
 
             // Calculate the time until the next rotation
             const timeUntilRotation = rotationTime - (currentTime % rotationTime);
@@ -119,6 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
         duosMapIndex = rotateMap(duosMapIndex, duosMaps);
         solosMapIndex = rotateMap(solosMapIndex, solosMaps);
         updateMap();
-    }, 5 * 1000);
+    }, 10 * 1000);
 });
 
