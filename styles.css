@@ -125,7 +125,7 @@ h4 {
     transform: translateX(-50%);
     border: 2px solid transparent;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.257);
+    background-color: rgba(0, 0, 0, 0.088);
     padding: 5px;
 }
 
@@ -170,6 +170,6 @@ h4 {
     }
     /* Adjust the countdown position to fit the extended height */
     .countdown {
-        bottom: 1px; /* Set the desired distance from the bottom */
+        bottom: 6px; /* Set the desired distance from the bottom */
     }
 }
