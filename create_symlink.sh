@@ -7,9 +7,6 @@ while true; do
     # Read the content of quadsResurgenceMap.txt
     map_name=$(<quadsResurgenceMap.txt)
 
-    # Remove existing link
-    rm -f "$symlink"
-
     # Check the content and create/override the symbolic link accordingly
     if [ "$map_name" == "Ashika" ]; then
         ln -sf images/Ashika.webp "$symlink"
@@ -19,6 +16,6 @@ while true; do
         echo "Unsupported map name: $map_name"
     fi
 
-    # Wait for 15 seconds before checking again
-    sleep 1
+    # Wait for 5 seconds before checking again
+    sleep 5
 done
