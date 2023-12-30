@@ -13,7 +13,7 @@ while true; do
     elif [ "$map_name" == "Popov" ]; then
         ln -sf images/Popov.webp "$symlink"
     elif [ "$map_name" == "Military" ]; then
-        ln -sf images/Military.wepb "$symlink"
+        ln -sf images/Military.webp "$symlink"
     else
         echo "Unsupported map name: $map_name"
     fi
