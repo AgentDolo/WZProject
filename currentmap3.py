@@ -7,8 +7,8 @@ maps_list = ["Vondel", "Ashika"]
 counter = 0
 
 while True:
-    # Check if it's time to display the next map every 15 seconds
-    if counter % 100 == 0:
+    # Check if it's time to display the next map every 5 seconds
+    if counter % 50 == 0:
         # Output the current map to the file
         current_map_index = counter // 10 % len(maps_list)
         current_map = maps_list[current_map_index]
