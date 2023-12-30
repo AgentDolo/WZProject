@@ -2,7 +2,7 @@ import time
 from datetime import datetime, timedelta
 
 # List of maps
-maps_list = ["Zaravan", "Popov", "Military"]
+maps_list = ["Ashika", "Vondel"]
 
 # Get the current time
 now = datetime.now()
@@ -25,7 +25,7 @@ while True:
     current_map = maps_list[current_map_index]
 
     # Write the current map to the file
-    with open('triosResurgenceMap.txt', 'w') as file:
+    with open('quadsResurgenceMap.txt', 'w') as file:
         file.write(current_map)
 
     # Wait for 15 minutes before the next rotation
