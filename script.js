@@ -68,33 +68,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateCountdown(countdownElement, mapIndex, maps) {
         function updateTimer() {
-            // Get the current time in UTC
-            const now = new Date();
-            const currentTime = now.getTime();
+    // Get the current time in UTC
+    const now = new Date();
+    const currentTime = now.getTime();
 
-            // Set the rotation time to every 15 minutes for demonstration purposes
-            const rotationTime = 15  * 1000; // 15 minutes in milliseconds
+    // Set the rotation time to every 15 minutes for demonstration purposes
+    const rotationTime = 15 * 60 * 1000; // 15 minutes in milliseconds
 
-            // Calculate the time until the next rotation
-            const timeUntilRotation = rotationTime - (currentTime % rotationTime);
+    // Calculate the time until the next rotation
+    const timeUntilRotation = rotationTime - (currentTime % rotationTime);
 
-            // Calculate minutes and seconds
-            const minutes = Math.floor(timeUntilRotation / 60000);
-            const seconds = Math.floor((timeUntilRotation % 60000) / 1000);
+    // Calculate minutes and seconds
+    const minutes = Math.floor(timeUntilRotation / 60000);
+    const seconds = Math.floor((timeUntilRotation % 60000) / 1000);
 
-            // Display the countdown
-            countdownElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    // Display the countdown
+    countdownElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 
-            if (timeUntilRotation <= 0) {
-                mapIndex = rotateMap(mapIndex, maps);
-                updateMap();
+    console.log('Current Time:', now);
+    console.log('Current Time in milliseconds:', currentTime);
+    console.log('Rotation Time:', rotationTime);
+    console.log('Time Until Rotation:', timeUntilRotation);
+    console.log('Minutes:', minutes);
+    console.log('Seconds:', seconds);
 
-                // Refresh the browser when the timer reaches 0:00
-                if (minutes === 0 && seconds === 0) {
-                    window.location.reload();
-                }
-            }
+    if (timeUntilRotation <= 0) {
+        console.log('Time is up!');
+
+        // If the time is up, rotate the map and update the timer
+        mapIndex = rotateMap(mapIndex, maps);
+        updateMap();
+
+        // Refresh the browser when the timer reaches 0:00
+        if (minutes === 0 && seconds === 0) {
+            console.log('Refreshing the browser...');
+            window.location.reload();
         }
+    }
+}
+
 
         // Initial update
         updateTimer();
