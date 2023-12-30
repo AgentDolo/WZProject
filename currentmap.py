@@ -1,29 +1,32 @@
 import time
+from datetime import datetime, timedelta
 
 # List of maps
 maps_list = ["Ashika", "Vondel"]
 
-# Counter to keep track of time elapsed
-counter = 0
+# Get the current time
+now = datetime.now()
+
+# Set the start time for rotation at 6 pm
+rotation_start_time = datetime(now.year, now.month, now.day, 18, 0, 0)
+
+# Calculate the time until the next rotation
+time_until_rotation = (rotation_start_time - now).total_seconds() % 900
+
+# Wait until the next rotation time
+time.sleep(time_until_rotation)
 
 while True:
-    # Get the current time in UTC
-    now = int(time.time())
+    # Get the current time
+    now = datetime.now()
 
-    # Set the rotation time to every 5 minutes (300 seconds) for demonstration purposes
-    rotation_time = 300
+    # Rotate the map every 15 minutes
+    current_map_index = int((now - rotation_start_time).total_seconds() / 900) % len(maps_list)
+    current_map = maps_list[current_map_index]
 
-    # Calculate the time until the next rotation
-    time_until_rotation = rotation_time - (now % rotation_time)
+    # Write the current map to the file
+    with open('quadsResurgenceMap.txt', 'w') as file:
+        file.write(current_map)
 
-    if time_until_rotation == 0:
-        # If the time is up, rotate the map
-        current_map_index = int(now / rotation_time) % len(maps_list)
-        current_map = maps_list[current_map_index]
-
-        # Write the current map to the file
-        with open('quadsResurgenceMap.txt', 'w') as file:
-            file.write(current_map)
-
-    # Wait for 1 second before checking again
-    time.sleep(1)
+    # Wait for 15 minutes before the next rotation
+    time.sleep(900)
