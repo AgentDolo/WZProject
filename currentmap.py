@@ -8,9 +8,9 @@ counter = 0
 
 while True:
     # Check if it's time to display the next map every 15 seconds
-    if counter % 100 == 0:
+    if counter % 5 == 0:
         # Output the current map to the file
-        current_map_index = counter // 10 % len(maps_list)
+        current_map_index = counter // 5 % len(maps_list)
         current_map = maps_list[current_map_index]
         
         # Write the current map to the file
