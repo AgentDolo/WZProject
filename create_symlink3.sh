@@ -4,7 +4,7 @@
 symlink="solosmap.jpg"
 
 while true; do
-    # Read the content of quadsResurgenceMap.txt
+    # Read the content of solosResurgenceMap.txt
     map_name=$(<solosResurgenceMap.txt)
 
     # Check the content and create/override the symbolic link accordingly
@@ -16,6 +16,6 @@ while true; do
         echo "Unsupported map name: $map_name"
     fi
 
-    # Wait for 15 seconds before checking again
-    sleep 2
+    # Wait for 5 seconds before checking again
+    sleep 5
 done
