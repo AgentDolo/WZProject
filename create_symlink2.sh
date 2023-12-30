@@ -1,23 +1,21 @@
 #!/bin/bash
 
 # Target symbolic link
-symlink="triosmap.jpg"
+symlink="solosmap.jpg"
 
 while true; do
-    # Read the content of triosResurgenceMap.txt
-    map_name=$(<triosResurgenceMap.txt)
+    # Read the content of solosResurgenceMap.txt
+    map_name=$(<solosResurgenceMap.txt)
 
     # Check the content and create/override the symbolic link accordingly
-    if [ "$map_name" == "Zaravan" ]; then
-        ln -sf images/Zaravan.webp "$symlink"
-    elif [ "$map_name" == "Popov" ]; then
-        ln -sf images/Popov.webp "$symlink"
-    elif [ "$map_name" == "Military" ]; then
-        ln -sf images/Military.webp "$symlink"
+    if [ "$map_name" == "Vondel" ]; then
+        ln -sf images/Vondel.webp "$symlink"
+    elif [ "$map_name" == "Ashika" ]; then
+        ln -sf images/Ashika.webp "$symlink"
     else
         echo "Unsupported map name: $map_name"
     fi
 
-    # Wait for 15 seconds before checking again
-    sleep 1
+    # Wait for 15 minutes before checking again
+    sleep 900
 done
