@@ -17,5 +17,5 @@ while true; do
     fi
 
     # Wait for 5 seconds before checking again
-    sleep 5
+    sleep 1
 done
