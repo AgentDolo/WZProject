@@ -7,18 +7,23 @@ maps_list = ["Vondel", "Ashika"]
 counter = 0
 
 while True:
-    # Check if it's time to display the next map every 5 seconds
-    if counter % 50 == 0:
-        # Output the current map to the file
-        current_map_index = counter // 10 % len(maps_list)
+    # Get the current time in UTC
+    now = int(time.time())
+
+    # Set the rotation time to every 5 minutes (300 seconds) for demonstration purposes
+    rotation_time = 300
+
+    # Calculate the time until the next rotation
+    time_until_rotation = rotation_time - (now % rotation_time)
+
+    if time_until_rotation == 0:
+        # If the time is up, rotate the map
+        current_map_index = int(now / rotation_time) % len(maps_list)
         current_map = maps_list[current_map_index]
-        
+
         # Write the current map to the file
         with open('solosResurgenceMap.txt', 'w') as file:
             file.write(current_map)
-
-    # Increment the counter every second
-    counter += 1
 
     # Wait for 1 second before checking again
     time.sleep(1)
