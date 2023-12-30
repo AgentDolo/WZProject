@@ -9,6 +9,9 @@ const mapsList = ["Ashika", "Vondel"];
 let counter = 0;
 let lastModifiedTime;
 
+// Serve static files from the current directory
+app.use(express.static(__dirname));
+
 app.get('/current-map', (req, res) => {
   // Check if the file has been modified
   const stats = fs.statSync('quadsResurgenceMap.txt');
