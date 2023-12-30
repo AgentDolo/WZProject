@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const app = express();
 
-// List of maps with name and image URL
+// List of maps
 const mapsList = ["Ashika", "Vondel"];
 
 // Counter to keep track of time elapsed
