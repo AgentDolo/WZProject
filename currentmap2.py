@@ -2,7 +2,7 @@ import time
 from datetime import datetime, timedelta
 
 # List of maps
-maps_list = ["Zaravan", "Popov", "Military"]
+maps_list = ["Military", "Zaravan", "Popov"]
 
 # Get the current time
 now = datetime.now()
