@@ -43,9 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const triosMaps = [
-      { name: "ZARAVAN", imageUrl: "images/Zaravan.webp" },
+      
       { name: "POPOV", imageUrl: "images/Popov.webp" },
-      { name: "MILITARY", imageUrl: "images/Military.webp" }
+      { name: "MILITARY", imageUrl: "images/Military.webp" },
+      { name: "ZARAVAN", imageUrl: "images/Zaravan.webp" }
       // Add more maps as needed
   ];
 
