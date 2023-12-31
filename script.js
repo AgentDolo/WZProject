@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Array of maps for each rotation
   const quadsMaps = [
-      { name: "VONDEL", imageUrl: "images/Vondel.webp" },
-      { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.webp" }
+      { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.webp" },
+      { name: "VONDEL", imageUrl: "images/Vondel.webp" }
       // Add more maps as needed
   ];
 
@@ -50,14 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const duosMaps = [
-      { name: "VONDEL", imageUrl: "images/Vondel.webp" },
-      { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.webp" }
+      { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.webp" },
+      { name: "VONDEL", imageUrl: "images/Vondel.webp" }
       // Add more maps as needed
   ];
 
   const solosMaps = [
-      { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.webp" },
-      { name: "VONDEL", imageUrl: "images/Vondel.webp" }
+      { name: "VONDEL", imageUrl: "images/Vondel.webp" },
+      { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.webp" }
       // Add more maps as needed
   ];
 
