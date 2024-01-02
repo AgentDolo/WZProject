@@ -43,9 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const triosMaps = [
+      { name: "MILITARY", imageUrl: "images/Military.webp" },
       { name: "ZARAVAN", imageUrl: "images/Zaravan.webp" },
-      { name: "POPOV", imageUrl: "images/Popov.webp" },
-      { name: "MILITARY", imageUrl: "images/Military.webp" }
+      { name: "POPOV", imageUrl: "images/Popov.webp" }
+      
       // Add more maps as needed
   ];
 
@@ -84,6 +85,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Display the countdown
           countdownElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+          // Check if the current time matches the specified patterns
+          const currentMinutes = now.getMinutes();
+          const currentSeconds = now.getSeconds();
+          const matchPatterns = ["00:01", "15:01", "30:01", "45:01"];
+          const currentTimePattern = `${currentMinutes < 10 ? '0' : ''}${currentMinutes}:${currentSeconds < 10 ? '0' : ''}${currentSeconds}`;
+
+          if (matchPatterns.includes(currentTimePattern)) {
+              window.location.reload();
+          }
 
           if (timeUntilRotation <= 0) {
               mapIndex = rotateMap(mapIndex, maps);
@@ -150,4 +161,3 @@ document.addEventListener("DOMContentLoaded", function () {
       updateMap();
   }, 15 * 60 * 1000 );
 });
-
