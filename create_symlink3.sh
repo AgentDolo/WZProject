@@ -16,6 +16,6 @@ while true; do
         echo "Unsupported map name: $map_name"
     fi
 
-    # Wait for 15 minutes before checking again
-    sleep 900
+    # Wait for 1 minutes before checking again
+    sleep 1
 done
