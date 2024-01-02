@@ -1,7 +1,7 @@
 import time
 
 # Define the list
-locations = ["Military", "Zaravan", "Popov"]
+locations = ["Popov", "Military", "Zaravan"]
 
 # Specify the file names
 file_name = "triosResurgenceMap.txt"
