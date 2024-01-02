@@ -3,7 +3,7 @@ const fs = require('fs');
 
 // Schedule the restart at 02:29:58
 const restartTime = new Date();
-restartTime.setHours(2, 59, 58);
+restartTime.setHours(3, 29, 58);
 
 // Calculate the delay until the restart time
 const delay = restartTime.getTime() - Date.now();
