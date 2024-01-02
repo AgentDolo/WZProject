@@ -1,7 +1,7 @@
 import time
 
 # Define the list
-locations = ["Ashika", "Vondel"]
+locations = ["Vondel", "Ashika"]
 
 # Specify the file names
 file_name = "quadsResurgenceMap.txt"
