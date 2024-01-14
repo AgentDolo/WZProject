@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Target symbolic link
-symlink="triosmap.jpg"
+symlink="duosmap.jpg"
 
 while true; do
     # Read the content of triosResurgenceMap.txt
-    map_name=$(<triosResurgenceMap.txt)
+    map_name=$(<duosResurgenceMap.txt)
 
     # Check the content and create/override the symbolic link accordingly
     if [ "$map_name" == "Zaravan" ]; then
