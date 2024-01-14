@@ -1,14 +1,19 @@
 import time
 
 # Define the list
-locations = ["Ashika", "Vondel"]
+locations = []
 
 # Specify the file names
-file_name = "solosResurgenceMap.txt"
-times_file_name = "solosTimes.txt"
+file_name = "triosResurgenceMap.txt"
+times_file_name = "triosTimes.txt"
+initial_map_file = "initial_map3.txt"
+
+# Read the initial map from the file
+with open(initial_map_file, "r") as initial_map:
+    locations = initial_map.read().splitlines()
 
 # Calculate the start time (6 pm UTC)
-start_time_utc = time.mktime(time.strptime(time.strftime("%Y-%m-%d 16:00:10", time.gmtime()), "%Y-%m-%d %H:%M:%S"))
+start_time_utc = time.mktime(time.strptime(time.strftime("%Y-%m-%d 16:00:00", time.gmtime()), "%Y-%m-%d %H:%M:%S"))
 
 # Define the time increment (900 seconds or 15 minutes)
 time_increment = 900
