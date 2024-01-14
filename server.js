@@ -3,7 +3,7 @@ const fs = require('fs');
 const app = express();
 
 // List of maps
-const mapsList = ["Popov Power"];
+const mapsList = [];
 
 // Counter to keep track of time elapsed
 let counter = 0;
