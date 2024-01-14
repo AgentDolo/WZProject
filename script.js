@@ -37,28 +37,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Array of maps for each rotation
   const quadsMaps = [
-      { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.webp" },
-      { name: "VONDEL", imageUrl: "images/Vondel.webp" }
+    { name: "Orlov Military Base", imageUrl: "images/Military.webp" },
+    { name: "Zaravan Suburbs", imageUrl: "images/Zaravan.webp" },
+    { name: "Popov Power", imageUrl: "images/Popov.webp" }
       // Add more maps as needed
   ];
 
   const triosMaps = [
-      { name: "MILITARY", imageUrl: "images/Military.webp" },
-      { name: "ZARAVAN", imageUrl: "images/Zaravan.webp" },
-      { name: "POPOV", imageUrl: "images/Popov.webp" }
+    { name: "Orlov Military Base", imageUrl: "images/Military.webp" }
       
       // Add more maps as needed
   ];
 
   const duosMaps = [
-      { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.webp" },
-      { name: "VONDEL", imageUrl: "images/Vondel.webp" }
+    
+    { name: "Zaravan Suburbs", imageUrl: "images/Zaravan.webp" },
+    { name: "Popov Power", imageUrl: "images/Popov.webp" },
+    { name: "Orlov Military Base", imageUrl: "images/Military.webp" }
       // Add more maps as needed
   ];
 
   const solosMaps = [
-      { name: "VONDEL", imageUrl: "images/Vondel.webp" },
-      { name: "ASHIKA ISLAND", imageUrl: "images/Ashika.webp" }
+      { name: "Vondel", imageUrl: "images/Vondel.webp" },
+      { name: "Ashika Island", imageUrl: "images/Ashika.webp" }
       // Add more maps as needed
   ];
 
