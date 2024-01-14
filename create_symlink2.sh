@@ -8,11 +8,11 @@ while true; do
     map_name=$(<duosResurgenceMap.txt)
 
     # Check the content and create/override the symbolic link accordingly
-    if [ "$map_name" == "Zaravan" ]; then
+    if [ "$map_name" == "Zaravan Suburbs" ]; then
         ln -sf images/Zaravan.webp "$symlink"
-    elif [ "$map_name" == "Popov" ]; then
+    elif [ "$map_name" == "Popov Power" ]; then
         ln -sf images/Popov.webp "$symlink"
-    elif [ "$map_name" == "Military" ]; then
+    elif [ "$map_name" == "Orlov Military Base" ]; then
         ln -sf images/Military.webp "$symlink"
     else
         echo "Unsupported map name: $map_name"
