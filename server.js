@@ -3,7 +3,7 @@ const fs = require('fs');
 const app = express();
 
 // List of maps
-const mapsList = ["Ashika", "Vondel"];
+const mapsList = ["Orlov Military Base", "Zaravan Suburbs", "Popov Power"];
 
 // Counter to keep track of time elapsed
 let counter = 0;
